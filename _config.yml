@@ -1,39 +1,41 @@
-# Site settings
+---
 title: Jekyll-Uno
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://joshgerdes.com/jekyll-uno'
-baseurl: '/jekyll-uno/'
-# google_analytics: 'UA-XXXXXX-X'
-# disqus_shortname: 'your-disqus-name'
-
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+description: Jekyll-Uno - a minimal, responsive theme for Jekyll
+url: http://joshgerdes.com/jekyll-uno
+baseurl: "/jekyll-uno/"
 author:
-  name: 'Josh Gerdes'
+  name: Josh Gerdes
   email: josh@joshgerdes.com
   twitter_username: joshgerdes
   facebook_username: joshgerdes
-  github_username:  joshgerdes
-  linkedin_username:  joshgerdes
-
-defaults:
-  -
-    scope:
-      path: ''
-      type: 'posts'
-    values:
-        layout: 'post'
-
-# Build settings
+  github_username: joshgerdes
+  linkedin_username: joshgerdes
 destination: _site
 paginate: 10
-permalink: /:year/:title/
+permalink: "/:year/:title/"
 markdown: kramdown
 highlighter: rouge
-
 kramdown:
-  # use Github Flavored Markdown
   input: GFM
-  # do not replace newlines by <br>s
   hard_wrap: false
-
-gems: ['jekyll-paginate']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+gems:
+- jekyll-paginate
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+- screenshot.png
